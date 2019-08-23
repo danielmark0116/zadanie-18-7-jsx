@@ -39,24 +39,21 @@ const contactForm = {
 
 const App = React.createClass({
   render: function() {
-    return React.createElement(
-      'div',
-      { className: 'contact-app', id: 'app-container' },
-      React.createElement(
-        'div',
-        { className: 'header' },
-        React.createElement('h2', {}, 'Contact list of'),
-        React.createElement('h1', {}, 'Daniel'),
-        React.createElement(
-          'div',
-          { className: 'header-photo', id: 'logo' },
-          React.createElement('img', {
-            src: 'https://img.icons8.com/clouds/100/000000/contact-card.png'
-          })
-        ),
-        React.createElement(ContactForm, { formData: contactForm })
-      ),
-      React.createElement(Contacts, { contacts: contactsData })
+    return (
+      <div className={'contact-app'} id={'app-container'}>
+        <div className={'header'}>
+          <h2>Contact list of</h2>
+          <h1>Daniel</h1>
+          <div className={'header-photo'} id={'logo'}>
+            <img
+              src={'https://img.icons8.com/clouds/100/000000/contact-card.png'}
+              alt=""
+            />
+          </div>
+          <ContactForm formData={contactForm}></ContactForm>
+        </div>
+        <Contacts contacts={contactsData}></Contacts>
+      </div>
     );
   }
 });
