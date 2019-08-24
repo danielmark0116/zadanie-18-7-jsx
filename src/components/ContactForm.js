@@ -4,65 +4,55 @@ const ContactForm = React.createClass({
   },
 
   render: function() {
-    return React.createElement(
-      'div',
-      { className: 'contact-form-container' },
-      React.createElement('small', {}, 'Add new one:'),
-      React.createElement(
-        'form',
-        { className: 'contact-form' },
-        React.createElement(
-          'div',
-          { className: 'form-input' },
-          React.createElement(
-            'div',
-            { className: 'ico' },
-            React.createElement('img', {
-              src:
-                'https://img.icons8.com/bubbles/50/000000/id-man-in-blue-shirt.png'
-            })
-          ),
-          React.createElement('input', {
-            type: 'text',
-            placeholder: 'Name',
-            value: this.props.formData.name
-          })
-        ),
-        React.createElement(
-          'div',
-          { className: 'form-input' },
-          React.createElement(
-            'div',
-            { className: 'ico' },
-            React.createElement('img', {
-              src:
-                'https://img.icons8.com/bubbles/50/000000/id-man-in-green-jacket.png'
-            })
-          ),
-          React.createElement('input', {
-            type: 'text',
-            placeholder: 'Surname',
-            value: this.props.formData.surname
-          })
-        ),
-        React.createElement(
-          'div',
-          { className: 'form-input' },
-          React.createElement(
-            'div',
-            { className: 'ico' },
-            React.createElement('img', {
-              src: 'https://img.icons8.com/bubbles/50/000000/email.png'
-            })
-          ),
-          React.createElement('input', {
-            type: 'text',
-            placeholder: 'Email',
-            value: this.props.formData.email
-          })
-        ),
-        React.createElement('button', {}, 'Add')
-      )
+    return (
+      <div className={'contact-form-container'}>
+        <small>Add new one:</small>
+        <form className={'contact-form'}>
+          <div className={'form-input'}>
+            <div className={'ico'}>
+              <img
+                src={
+                  'https://img.icons8.com/bubbles/50/000000/id-man-in-blue-shirt.png'
+                }
+                alt=""
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Name"
+              value={this.props.formData.name}
+            />
+          </div>
+          <div className={'form-input'}>
+            <div className={'ico'}>
+              <img
+                src={
+                  'https://img.icons8.com/bubbles/50/000000/id-man-in-green-jacket.png'
+                }
+                alt=""
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Surname"
+              value={this.props.formData.surname}
+            />
+          </div>
+          <div className={'form-input'}>
+            <div className={'ico'}>
+              <img
+                src={'https://img.icons8.com/bubbles/50/000000/email.png'}
+                alt=""
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Email"
+              value={this.props.formData.email}
+            />
+          </div>
+        </form>
+      </div>
     );
   }
 });

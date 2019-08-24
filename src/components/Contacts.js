@@ -5,13 +5,9 @@ const Contacts = React.createClass({
 
   render: function() {
     const contactsList = this.props.contacts.map((singleContact, i) => {
-      return React.createElement(Contact, { key: i, contact: singleContact });
+      return <Contact contact={singleContact} key={i} />;
     });
 
-    return React.createElement(
-      'div',
-      { className: 'contacts-container' },
-      contactsList
-    );
+    return <div className={'contacts-container'}>{contactsList}</div>;
   }
 });
