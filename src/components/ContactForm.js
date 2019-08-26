@@ -11,9 +11,7 @@ const ContactForm = React.createClass({
           <div className={'form-input'}>
             <div className={'ico'}>
               <img
-                src={
-                  'https://img.icons8.com/bubbles/50/000000/id-man-in-blue-shirt.png'
-                }
+                src={'https://img.icons8.com/bubbles/50/000000/id-man-in-blue-shirt.png'}
                 alt=""
               />
             </div>
@@ -26,9 +24,7 @@ const ContactForm = React.createClass({
           <div className={'form-input'}>
             <div className={'ico'}>
               <img
-                src={
-                  'https://img.icons8.com/bubbles/50/000000/id-man-in-green-jacket.png'
-                }
+                src={'https://img.icons8.com/bubbles/50/000000/id-man-in-green-jacket.png'}
                 alt=""
               />
             </div>
